@@ -1,88 +1,47 @@
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+#include <climits>
+using  namespace std;
 
-// int main(){
-//     //     int size =5;
-// //     int marks[size];
+int main(){
+    // // int marks[10] = {30,40,50,30,2};
+    // int marks[] = {99,30,292,291,9};
+    // cout<< sizeof(marks);
 
-// //    for(int i=0; i<size; i++){
-// //         cin>>marks[i];
-// //    }
 
-// //     for(int i=0; i<size; i++){
-// //           cout<<marks[i]<<endl;
-// //     }
-  
+// Q. Smallest
+
+  int nums[] = {10,2,17,-9,-7,3};
+  int sz = sizeof(nums);
+
+//   int smallest = INT16_MAX;
+
+//   for(int i=0; i<sz; i++){
+//     // if(nums[i] < smallest){
+//     //     smallest = nums[i];
+//     // }
+//     smallest = min(nums[i],smallest);
+//   }
+//   cout<<"smallest:" <<smallest;
+
+//  Q.Largest
+
+// int largest = INT16_MIN;
+// for(int i=0; i<sz; i++){
+//     if(nums[i]>largest){
+//         largest = nums[i];
+//     }
+// }
+// cout<<"largest :" <<largest;
+
 //     return 0;
 // }
 
 
+// Q.Linear Search
 
-
-
-// #include <iostream>
-// using namespace std;
-
-// int main(){
-    // Q.find smallest number
-    // int nums[]={10,20,-3, 60,-40,7};
-    // int size = 6;
-    // int smallest = INT16_MAX;  
-
-    // for(int i=0; i<size; i++){
-    //     if(nums[i]<smallest){
-    //         smallest=nums[i];
-    //     }
-    // }
-    // cout<<"smallest:"<<smallest;
-
-        //  OR
-
-    // int nums[]={10,20,-3, 60,-40,7};
-    // int size = 6;
-    // int smallest = INT16_MAX;  
-
-    // for(int i=0; i<size; i++){
-    //     smallest=min(nums[i],smallest) ;
-    // }
-    // cout<<"smallest:"<<smallest;
-
-
-    // Q.find heghest number
-    // int nums[]={10,20,-3, 60,-40,7};
-    // int size = 6;
-    // int heighest = INT16_MIN;  
-
-    // for(int i=0; i<size; i++){
-    //     if(nums[i]>heighest){
-    //         heighest=nums[i];
-    //     }
-    // }
-    // cout<<"heighest:"<<heighest;
-
-                //  OR
-
-    // int nums[]={10,20,-3, 60,-40,7};
-    // int size = 6;
-    // int heighest = INT16_MIN;  
-
-    // for(int i=0; i<size; i++){
-    //     heighest=max(nums[i],heighest) ;
-    // }
-    // cout<<"heighest:"<<heighest;
-//     return 0;
-// }
-
-
-
-
-// LINEAR_SEARCH
-// #include <iostream>
-// using namespace std;
-
-// int linearSearch(int nums[], int sz, int target){
+// int LinearSearch(int nums[], int sz, int target){
 //     for(int i=0; i<sz; i++){
-//         if(nums[i]==target){
+//         if(nums[i] == target){
 //             return i;
 //         }
 //     }
@@ -90,37 +49,45 @@
 // }
 
 // int main(){
-//   int nums[]={2,3,4,6,7,4};
-//   int sz=6;
-//   int target = 3;
-//   cout<<linearSearch(nums,sz,target);
+
+//     int nums[] = {9,3,4,5,2,8};
+//     int sz =sizeof(nums);
+//     int target = 8;
+
+//     cout<<LinearSearch(nums,sz,target);
 //     return 0;
 // }
 
 
+// Q.Reverse
 
+// int Reverse(int nums[], int sz){
+//    int start = 0; 
+//    int end = sz-1;
 
-// REVERSEARRAY
-#include <iostream>
-using namespace std;
+//    while(start<end){
+//     swap(nums[start],nums[end]);
+//     start++;
+//     end--;
+//    }
+// }
 
-void reverseArray(int arr[],int sz){
-    int start=0;int end=sz-1;
-    while(start<end){
-        swap(arr[start],arr[end]);
-        start++;
-        end--;
-    }
+// int main(){
+
+//     int nums[] = {9,3,4,5,2,8};
+//     int sz = 6;
+       
+
+//    Reverse(nums,sz);
+
+//     for(int i=0; i<sz; i++){
+//         cout<<nums[i];
+//     }
+//     return 0;
 }
 
 
-int main(){
-    int arr[]={4,2,5,7,9,4,0};
-    int sz=7;
-    reverseArray(arr,sz);
-    for(int i=0; i<sz; i++){
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
-    return 0;
-}
+
+
+
+
