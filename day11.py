@@ -50,17 +50,53 @@
 
 # Q.Character Hashing
 
+
 s = "azyxyyzaaaa"
 q = ["d","a","y","x"]
 
+# * Brute Froce
 
-for ch in q:
-    count = 0
-    for cha in s:
-        if cha == ch:
-            count +=1
+# for ch in q:
+#     count = 0
+#     for cha in s:
+#         if cha == ch:
+#             count +=1
 
-    print(ch,":",count)
+#     print(ch,":",count)
+
+# * Optimal
+# hash_list = [0]*26
+# for i in s:
+#     ascii_val = ord(i)
+#     index = ascii_val-97
+#     hash_list[index] +=1
+
+# for j in q:
+#     ascii_val = ord(j)
+#     index = ascii_val -97
+#     print(j,":",hash_list[index])
+
+
+# *Optimal in Dict
+
+dict = {}
+for i in range(0,len(s)):
+    if s[i] in dict:
+        dict[s[i]] += 1
+    else:
+        dict[s[i]] = 1
+
+for j in range(0,len(q)):
+    print(q[j],":",dict.get(q[j],0))
+    
+
+
+
+
+
+
+
+
 
 
 
